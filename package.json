@@ -1,0 +1,11 @@
+{
+  "name": "ai-worlds-fair-2025-talk",
+  "version": "1.0.0",
+  "description": "React slides app with CDN Babel and Tailwind",
+  "scripts": {
+    "start": "http-server -c-1 -p 3000"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+} 
