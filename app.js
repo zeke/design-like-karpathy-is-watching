@@ -7,7 +7,7 @@ const slides = [
     content: (
       <div className="flex flex-col items-center justify-center h-full w-full bg-orange-400">
         <div className="relative w-screen h-screen">
-          <img src="https://replicate.delivery/xezq/wKCKXTthCZJoEJUU7nZwriZs5NOKOJugwIZAImUJO6ZreqZKA/tmp0l9992gl.png" className="absolute w-screen h-screen object-cover"></img>          
+          <img src="https://replicate.delivery/xezq/wKCKXTthCZJoEJUU7nZwriZs5NOKOJugwIZAImUJO6ZreqZKA/tmp0l9992gl.png" className="absolute w-screen h-screen object-cover"></img>
         </div>
       </div>
     ),
@@ -15,14 +15,28 @@ const slides = [
   {
     content: (
       <div className="flex flex-col items-center justify-center h-full w-full bg-yellow-300">
-        <img src="images/replicate-logos.png" className="max-w-[50%] h-auto object-contain"></img>
+        <img src="images/talk-github-repo-qr-code.png" className="w-[90vw] h-[90vh] object-contain mix-blend-multiply"></img>
+      </div>
+    ),
+  },
+  {
+    content: (
+      <div className="flex flex-col items-center justify-center h-full w-full bg-yellow-300">
+        <h2 className="text-[20vw] text-black">@zeke</h2>
+      </div>
+    ),
+  },
+  {
+    content: (
+      <div className="flex flex-col items-center justify-center h-full w-full bg-yellow-300">
+        <img src="images/replicate-logos.png" className="max-h-[50%] h-auto object-contain"></img>
       </div>
     ),
   },
   {
     content: (
       <div className="flex flex-col items-center justify-center h-full w-full" style={{ backgroundColor: 'rgb(32, 32, 34)' }}>
-        <blockquote className="text-[4vw] max-w-[50%] py-16 text-center goudy-bookletter-1911-regular">This talk is for people who make products for software developers.</blockquote>
+        <blockquote className="text-[4vw] max-w-[50%] py-16 text-center goudy-bookletter-1911-regular">For whom is this talk?</blockquote>
       </div>
     ),
   },
@@ -35,6 +49,20 @@ const slides = [
       </div>
     ),
   },
+
+  {
+    content: (
+      <div className="flex flex-col items-center justify-center h-full w-full relative">
+        <ol className="list-decimal space-y-10 text-6xl goudy-bookletter-1911-regular">
+          <li>Researcher at Google Brain / OpenAI / Tesla / OpenAI</li>
+          <li>Stanford professor</li>
+          <li>Coiner of the term "vibe coding"</li>
+          <li>YouTube superstar</li>
+        </ol>
+      </div>
+    ),
+  },
+
   {
     content: (
       <div className="flex flex-col items-center justify-center h-full w-full">
@@ -62,7 +90,7 @@ allowfullscreen></iframe>
     content: (
       <div className="flex flex-col items-center justify-center h-full w-full relative">
         <img src="https://replicate.delivery/xezq/hD9ekOUwBTUMQy9ZQObEUuiSjbpZM6qOpAzZJ79hhAWfwXzUA/out-0.png" className="absolute inset-0 w-full h-full object-cover" />
-        <blockquote className="text-[5vw] max-w-[80%] py-16 goudy-bookletter-1911-regular relative z-10">&quot;Here is where some of the troubles started [with] OpenAI, Replicate, Vercel, Clerk, Stripe...&quot;</blockquote>
+        <blockquote className="text-[5vw] max-w-[80%] py-16 goudy-bookletter-1911-regular relative z-10"><span className="opacity-50">&quot;Here is where some of the troubles started [with]</span> OpenAI, Replicate, Vercel, Clerk, Stripe...&quot;</blockquote>
       </div>  
     ),
   },
@@ -82,7 +110,7 @@ allowfullscreen></iframe>
   {
     content: (
       <div className="flex flex-col items-center justify-center h-full w-full bg-rose-500">        
-        <p className="text-6xl">
+        <p className="text-6xl goudy-bookletter-1911-regular">
           <ol className="list-decimal space-y-10">
             <li>Accept payments</li>
             <li>Document your shit</li>
@@ -117,6 +145,16 @@ allowfullscreen></iframe>
     content: (
       <div className="flex flex-col items-center justify-center h-full w-full">
         <p className="text-6xl">Feed the machines</p>
+      </div>
+    ),
+  },
+
+  {
+    content: (
+      <div className="flex flex-col items-center justify-center h-full w-full">
+        <p className="max-w-[50%] text-6xl goudy-bookletter-1911-regular">Tired: elaborate docs pages with fancy color palettes, branding, animations, transitions, dark mode, ...<br />
+        Wired: one single docs .md file and a "copy to clipboard" button.
+        </p>
       </div>
     ),
   },
@@ -202,22 +240,7 @@ allowfullscreen></iframe>
       </div>
     ),
   },
-  {
-    content: (
-      <div className="flex flex-col items-center justify-center h-full w-full">
-        <h2 className="text-8xl font-extrabold mb-4" style={{ fontFamily: 'Noto Serif, serif' }}>Lean into OpenAPI</h2>
-        <p className="text-2xl">Everything will build on top of OpenAPI: docs, SDKs, MCP servers, etc.</p>
-      </div>
-    ),
-  },
-  {
-    content: (
-      <div className="flex flex-col items-center justify-center h-full w-full">
-        <h2 className="text-8xl font-extrabold mb-4" style={{ fontFamily: 'Noto Serif, serif' }}>Mind the context window</h2>
-        <p className="text-2xl">In the age of MCP, it's too easy to blow your context window budget.</p>
-      </div>
-    ),
-  },
+
 ];
 
 function SlideShow() {
