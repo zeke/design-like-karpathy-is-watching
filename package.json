@@ -1,7 +1,7 @@
 {
-  "name": "ai-worlds-fair-2025-talk",
+  "name": "design-like-karpathy-is-watching",
   "version": "1.0.0",
-  "description": "React slides app with CDN Babel and Tailwind",
+  "description": "Slides for a talk about AI design at AI Engineer World's Fair 2025",
   "scripts": {
     "start": "http-server -c-1 -p 3000"
   },
