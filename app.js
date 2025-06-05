@@ -22,7 +22,7 @@ const slides = [
   {
     content: (
       <div className="flex flex-col items-center justify-center h-full w-full bg-yellow-300">
-        <h2 className="text-[20vw] text-black">@zeke</h2>
+        <h2 className="text-[12vw] text-black font-bold"><span className="opacity-20">@</span>zeke</h2>
       </div>
     ),
   },
@@ -35,34 +35,35 @@ const slides = [
   },
   {
     content: (
-      <div className="flex flex-col items-center justify-center h-full w-full" style={{ backgroundColor: 'rgb(32, 32, 34)' }}>
-        <blockquote className="text-[4vw] max-w-[50%] py-16 text-center goudy-bookletter-1911-regular">For whom is this talk?</blockquote>
-      </div>
-    ),
-  },
-
-  {
-    content: (
       <div className="flex flex-col items-center justify-center h-full w-full relative">
         <img src="https://replicate.delivery/xezq/AeGpTAnJJaV1eUrGOODBYushnz8MeZHx2kRmw9hIfbVQIhNTB/tmpqh08kic3.jpg" className="absolute inset-0 w-full h-full object-cover" />
         <blockquote className="text-[6vw] px-64 py-16 text-center goudy-bookletter-1911-regular relative z-10">Who is Andrej Karpathy?</blockquote>
       </div>
     ),
   },
-
   {
     content: (
-      <div className="flex flex-col items-center justify-center h-full w-full relative">
-        <ol className="list-decimal space-y-10 text-6xl goudy-bookletter-1911-regular">
-          <li>Researcher at Google Brain / OpenAI / Tesla / OpenAI</li>
+      <div className="flex flex-col items-center justify-center h-full w-full relative" style={{ backgroundColor: 'rgb(2, 91, 99)' }}>
+        <ul className="list-disc space-y-10 text-7xl goudy-bookletter-1911-regular">
+          <li>AI researcher at Google / OpenAI / Tesla / OpenAI / Eureka Labs</li>
           <li>Stanford professor</li>
-          <li>Coiner of the term "vibe coding"</li>
-          <li>YouTube superstar</li>
-        </ol>
+          <li>YouTube educator</li>
+          <li>Coined the term "vibe coding"</li>
+          <li>Thinks the hottest new programming language is English</li>
+          <li>Wrote the Software 2.0 manifesto (7 years ago)</li>
+        </ul>
       </div>
     ),
   },
 
+  {
+    content: (
+      <div className="flex flex-col items-center justify-center h-full w-full relative">
+        <blockquote className="text-[6vw] px-64 py-16 text-center goudy-bookletter-1911-regular relative z-10">What is MenuGen?</blockquote>
+      </div>
+    ),
+  },
+  
   {
     content: (
       <div className="flex flex-col items-center justify-center h-full w-full">
@@ -76,7 +77,6 @@ allowfullscreen></iframe>
       </div>
     ),
   },
-
   {
     content: (
       <div className="flex flex-col items-center justify-center h-full w-full relative">
@@ -85,7 +85,6 @@ allowfullscreen></iframe>
       </div>
     ),
   },
-
   {
     content: (
       <div className="flex flex-col items-center justify-center h-full w-full relative">
@@ -94,9 +93,6 @@ allowfullscreen></iframe>
       </div>  
     ),
   },
-
-
-
   {
     content: (
       <div className="flex flex-col items-center justify-center h-full w-full relative">
@@ -105,110 +101,61 @@ allowfullscreen></iframe>
       </div>  
     ),
   },
-
+  // {
+  //   content: (
+  //     <div className="flex flex-col items-center justify-center h-full w-full">
+  //       <img src="https://replicate.delivery/xezq/ssZ7s25lkV5DCNQQy6cvduiYzEQEM5TsI0l9jfIeuNW0x9yUA/tmptlyi0lma.png" className="w-screen h-screen object-cover"></img>
+  //     </div>
+  //   ),
+  // },
 
   {
     content: (
-      <div className="flex flex-col items-center justify-center h-full w-full bg-rose-500">        
-        <p className="text-6xl goudy-bookletter-1911-regular">
-          <ol className="list-decimal space-y-10">
-            <li>Accept payments</li>
-            <li>Document your shit</li>
-            <li>Feed the machines</li>
-            <li>Use boring technology</li>
-            <li>Practice good hygiene</li>
-            <li>Deploy early and often</li>
-          </ol>
-        </p>
+      <div className="flex flex-col items-center justify-center h-full w-full relative">
+        <blockquote className="text-[6vw] px-64 py-16 text-center goudy-bookletter-1911-regular relative z-10">What can Replicate do better?</blockquote>
       </div>
     ),
   },
 
   {
     content: (
-      <div className="flex flex-col items-center justify-center h-full w-full">
-        <img src="https://replicate.delivery/xezq/ssZ7s25lkV5DCNQQy6cvduiYzEQEM5TsI0l9jfIeuNW0x9yUA/tmptlyi0lma.png" className="w-screen h-screen object-cover"></img>
-      </div>
-    ),
-  },
-
-  {
-    content: (
-      <div className="flex flex-col items-center justify-center h-full w-full">
-        <p className="text-6xl">Document your shit (write OpenAPI docs)</p>
+      <div className="flex flex-col items-center justify-center h-full w-full relative">
+        <blockquote className="text-[6vw] px-64 py-16 text-center goudy-bookletter-1911-regular relative z-10"><span className="opacity-30">Embrace</span> llms.txt</blockquote>
       </div>
     ),
   },
 
 
-  {
-    content: (
-      <div className="flex flex-col items-center justify-center h-full w-full">
-        <p className="text-6xl">Feed the machines</p>
-      </div>
-    ),
-  },
 
   {
     content: (
       <div className="flex flex-col items-center justify-center h-full w-full">
-        <p className="max-w-[50%] text-6xl goudy-bookletter-1911-regular">Tired: elaborate docs pages with fancy color palettes, branding, animations, transitions, dark mode, ...<br />
-        Wired: one single docs .md file and a "copy to clipboard" button.
-        </p>
+
+      <img src="https://replicate.delivery/xezq/hD9ekOUwBTUMQy9ZQObEUuiSjbpZM6qOpAzZJ79hhAWfwXzUA/out-0.png" className="absolute inset-0 w-full h-full object-cover" />
+      <blockquote className="text-[3vw] max-w-[80%] py-16 goudy-bookletter-1911-regular relative z-10">Tired: elaborate docs pages with fancy color palettes, branding, animations, transitions, dark mode.<br /><br />
+      Wired: one single docs .md file and a "copy to clipboard" button.
+      <br /><br />
+      <span className="opacity-50">-- Karpathy</span>
+      </blockquote>
       </div>
     ),
   },
-
+  
   {
     content: (
       <div className="flex flex-col items-center justify-center h-full w-full">
-        <p className="text-6xl">$ curl https://cog.run/llms.txt</p>
+        <video src="videos/llm-buttons.mp4" className="w-screen h-screen object-cover" controls muted />
       </div>  
     ),
   },
-
   {
     content: (
-      <div className="flex flex-col items-center justify-center h-full w-full">
-        <img src="images/replicate-llm-button.png" className="absolute inset-0 w-full h-full object-cover" />
+      <div className="flex flex-col items-center justify-center h-full w-full relative">
+        <img src="https://replicate.delivery/xezq/hD9ekOUwBTUMQy9ZQObEUuiSjbpZM6qOpAzZJ79hhAWfwXzUA/out-0.png" className="absolute inset-0 w-full h-full object-cover" />
+        <blockquote className="text-[4vw] max-w-[80%] py-16 goudy-bookletter-1911-regular relative z-10">&quot;LLMs don’t like to click, they like to curl.&quot;
+          <br /><br />
+        <span className="opacity-50">-- Karpathy</span></blockquote>
       </div>  
-    ),
-  },
-
-  {
-    content: (
-      <div className="flex flex-col items-center justify-center h-full w-full" style={{ backgroundColor: '#BC694A' }}>
-        <img src="images/open-in-claude.png" className="object-contain" />
-      </div>  
-    ),
-  },
-
-
-  {
-  content: (
-    <div className="flex flex-col items-center justify-center h-full w-full" style={{ backgroundColor: '#BC694A' }}>
-      <img src="images/claude.png" className="object-contain" />
-    </div>  
-  ),
-  },
-
-
-
-  {
-    content: (
-      <div className="flex flex-col items-center justify-center h-full w-full" style={{ backgroundColor: 'rgb(30, 79, 13)' }}>
-        <p className="text-6xl">
-          <ol className="list-decimal space-y-10">
-            <li className="opacity-30">Accept payments</li>
-            <li className="opacity-30">Document your shit</li>
-            <li className="opacity-30">Feed the machines</li>
-            <li className="opacity-100">Use boring technology <span className="opacity-50">(cURL, SQL, HTTP, OpenAPI)</span></li>
-            <li className="opacity-30">Practice good hygiene</li>
-            <li className="opacity-30">Be mindful of context window limits</li>
-            <li className="opacity-30">Deploy early and often</li>
-          </ol>
-        </p>
-      </div>
     ),
   },
   {
@@ -221,22 +168,76 @@ allowfullscreen></iframe>
   {
     content: (
       <div className="flex flex-col items-center justify-center h-full w-full">
+        <video src="videos/curl-cog-llms-txt.mp4" className="w-screen h-screen object-cover" controls muted />
+      </div>  
+    ),
+  },
+  {
+    content: (
+      <div className="flex flex-col items-center justify-center h-full w-full">
+        {/* curl screenshot with all the parts */}
         <img src="images/ray-so-export.png" className="w-[95vw] h-[95vh] object-contain"></img>
       </div>
     ),
   },
+  {
+    content: (
+      <div className="flex flex-col items-center justify-center h-full w-full relative">
+        <img src="https://replicate.delivery/xezq/hD9ekOUwBTUMQy9ZQObEUuiSjbpZM6qOpAzZJ79hhAWfwXzUA/out-0.png" className="absolute inset-0 w-full h-full object-cover" />
+        <blockquote className="text-[4vw] max-w-[80%] py-16 goudy-bookletter-1911-regular relative z-10">&quot;The primary audience of your thing (product, service, library, …) is now an LLM, not a human.&quot;
+          <br /><br />
+        <span className="opacity-50">-- Karpathy</span></blockquote>
+      </div>  
+    ),
+  },
 
-  // {
-  //   content: (
-  //     <div className="flex flex-col items-center justify-center h-screen w-screen">
-  //       <img src="https://replicate.delivery/xezq/4MIVrd8lUaamJN35dJzUNtYI0onNIDejuHwmqehaK7ist7yUA/tmpfrmkmech.png" className="w-screen h-screen object-cover"></img>
-  //     </div>
-  //   ),
-  // },
   {
     content: (
       <div className="flex flex-col items-center justify-center h-full w-full">
         <img src="https://replicate.delivery/xezq/9hxY5CDez1Rf1U8ht93wjxWswkY1wYJzHgQWA4laKoM6fsmpA/tmpejwc0a3z.jpg" className="w-screen h-screen object-cover"></img>
+      </div>
+    ),
+  },
+
+  {
+    content: (
+      <div className="flex flex-col items-center justify-center h-full w-full">
+        <video src="videos/openapi-mcp.mp4" className="w-screen h-screen object-cover" controls muted />
+      </div>
+    ),
+  },
+
+  {
+    content: (
+      <div className="flex flex-col items-center justify-center h-full w-full">
+        <video src="videos/claude-mcp.mp4" className="w-screen h-screen object-cover" controls muted />
+      </div>
+    ),
+  },
+
+  {
+    content: (
+      <div className="flex flex-col items-center justify-center h-full w-full bg-rose-700">        
+        <p className="text-6xl goudy-bookletter-1911-regular">
+          Takeaways<br /><br />
+
+          <ol className="list-decimal space-y-10">
+            <li>Accept payments <span className="opacity-50">(so power users can scale up quickly)</span></li>
+            <li>Document your shit <span className="opacity-50">(using OpenAPI)</span></li>
+            <li>Feed the machines <span className="opacity-50">(llms.txt, curl, markdown, schemas)</span></li>
+            <li>Use boring technology <span className="opacity-50">(LLMs know them well)</span></li>
+            <li>Practice good API hygiene <span className="opacity-50">(so your MCP users love you)</span></li>
+          </ol>
+        </p>
+      </div>
+    ),
+  },
+
+  {
+    content: (
+      <div className="flex flex-col items-center justify-center h-full w-full relative">
+        <img src="https://replicate.delivery/xezq/hD9ekOUwBTUMQy9ZQObEUuiSjbpZM6qOpAzZJ79hhAWfwXzUA/out-0.png" className="absolute inset-0 w-full h-full object-cover" />
+        <blockquote className="text-[6vw] px-64 py-16 text-center goudy-bookletter-1911-regular relative z-10">-- FIN --</blockquote>
       </div>
     ),
   },
@@ -248,6 +249,7 @@ function SlideShow() {
     const saved = localStorage.getItem(SLIDE_STORAGE_KEY);
     return saved !== null ? Number(saved) : 0;
   });
+  const [gridView, setGridView] = useState(false);
 
   const goTo = useCallback((idx) => {
     setCurrent((prev) => {
@@ -265,7 +267,15 @@ function SlideShow() {
 
   useEffect(() => {
     const handleKeyDown = (e) => {
-      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+      if (gridView) {
+        if (e.key === 'Escape') {
+          setGridView(false);
+        }
+        return;
+      }
+      if (e.key === 'Escape') {
+        setGridView(true);
+      } else if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
         goTo(current + 1);
       } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
         goTo(current - 1);
@@ -273,7 +283,33 @@ function SlideShow() {
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [current, goTo]);
+  }, [current, goTo, gridView]);
+
+  if (gridView) {
+    return (
+      <div className="fixed inset-0 w-screen h-screen bg-black/80 flex flex-col items-center justify-center z-50 overflow-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-8 max-w-full max-h-full">
+          {slides.map((slide, idx) => (
+            <button
+              key={idx}
+              className="relative aspect-video w-64 bg-white rounded-lg overflow-hidden shadow-lg border-4 border-transparent hover:border-yellow-400 transition-all duration-200 focus:outline-none"
+              onClick={() => {
+                goTo(idx);
+                setGridView(false);
+              }}
+              aria-label={`Go to slide ${idx + 1}`}
+            >
+              <div className="absolute top-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded z-10">{idx + 1}</div>
+              <div className="w-full h-full pointer-events-none scale-75 origin-top-left">
+                {slide.content}
+              </div>
+            </button>
+          ))}
+        </div>
+        <div className="mt-4 text-white text-lg opacity-70">Click a slide to zoom in. Press Escape to exit grid view.</div>
+      </div>
+    );
+  }
 
   return (
     <div className="fixed inset-0 w-screen h-screen overflow-hidden">
