@@ -1,6 +1,21 @@
-const { useState, useEffect, useCallback } = React;
+const { useState, useEffect, useCallback, useRef } = React;
 
 const SLIDE_STORAGE_KEY = 'currentSlideIndex';
+
+// Define video slide ids
+const VIDEO_SLIDE_IDS = [
+  'llm-buttons',
+  'curl-frog',
+  'curl-cog-llms-txt',
+  'cursor-cog',
+  'openapi-mcp',
+  'claude-mcp',
+];
+
+// Create refs for each video id
+const videoRefs = Object.fromEntries(
+  VIDEO_SLIDE_IDS.map((id) => [id, React.createRef()])
+);
 
 const slides = [
   {
@@ -35,6 +50,21 @@ const slides = [
   },
   {
     content: (
+      <div className="flex flex-col items-center justify-center h-full w-full bg-gray-900">
+        <ul className="font-['Roboto_Mono'] text-6xl space-y-12">
+          <li className="text-stone-500">// Run AI with an API<br /></li>
+          <li className="text-pink-400">replicate.run("kwaivgi/kling-v2.0")</li>
+          <li className="text-red-400">replicate.run("anthropic/claude-4-sonnet")</li>
+          <li className="text-orange-400">replicate.run("openai/gpt-4o")</li>
+          <li className="text-yellow-400">replicate.run("google/imagen-4")</li>
+          <li className="text-green-400">replicate.run("your/custom-model")</li>
+        </ul>
+      </div>
+    ),
+  },
+
+  {
+    content: (
       <div className="flex flex-col items-center justify-center h-full w-full relative">
         <img src="https://replicate.delivery/xezq/AeGpTAnJJaV1eUrGOODBYushnz8MeZHx2kRmw9hIfbVQIhNTB/tmpqh08kic3.jpg" className="absolute inset-0 w-full h-full object-cover" />
         <blockquote className="text-[6vw] px-64 py-16 text-center goudy-bookletter-1911-regular relative z-10">Who is Andrej Karpathy?</blockquote>
@@ -43,8 +73,8 @@ const slides = [
   },
   {
     content: (
-      <div className="flex flex-col items-center justify-center h-full w-full relative" style={{ backgroundColor: 'rgb(2, 91, 99)' }}>
-        <ul className="list-disc space-y-10 text-7xl goudy-bookletter-1911-regular">
+      <div className="flex flex-col items-center justify-center h-full w-full relative" style={{ backgroundColor: 'rgb(73, 162, 120)' }}>
+        <ul className="list-disc space-y-10 text-5xl goudy-bookletter-1911-regular">
           <li>AI researcher at Google / OpenAI / Tesla / OpenAI / Eureka Labs</li>
           <li>Stanford professor</li>
           <li>YouTube educator</li>
@@ -97,7 +127,7 @@ allowfullscreen></iframe>
     content: (
       <div className="flex flex-col items-center justify-center h-full w-full relative">
         <img src="https://replicate.delivery/xezq/hD9ekOUwBTUMQy9ZQObEUuiSjbpZM6qOpAzZJ79hhAWfwXzUA/out-0.png" className="absolute inset-0 w-full h-full object-cover" />
-        <blockquote className="text-[3vw] max-w-[90%] py-16 goudy-bookletter-1911-regular relative z-10">&quot;I needed to generate images [...] I signed up for a new Replicate API key and ran into issues relatively quickly. My queries didn't work because LLM knowledge was deprecated, but in addition, this time even the official docs were a little bit out of date due to recent changes in the API, which now don't return the JSON directly but instead some kind of a Streaming object that neither I or Claude understood. I then faced rate limiting on the API so it was difficult to debug the app. I was told later that these are common protection measures by these services to mitigate fraud, but they also make it harder to get started with new, legitimate accounts.&quot;</blockquote>
+        <blockquote className="text-[3vw] max-w-[90%] py-16 goudy-bookletter-1911-regular relative z-10"><span className="opacity-50">&quot;I needed to generate images [...] I signed up for a new Replicate API key and ran into issues relatively quickly. My queries didn't work because</span> <span className="opacity-100">LLM knowledge was deprecated</span><span className="opacity-50">, but in addition, this time even the official</span> <span className="opacity-100">docs were a little bit out of date</span><span className="opacity-50"> due to recent changes in the API, which now don't return the JSON directly but instead some kind of a Streaming object that neither I or Claude understood. I then faced</span> <span className="opacity-100">rate limiting on the API</span><span className="opacity-50"> so it was difficult to debug the app. I was told later that these are common protection measures by these services to mitigate fraud, but they also make it</span> <span className="opacity-100">harder to get started with new, legitimate accounts.&quot;</span></blockquote>
       </div>  
     ),
   },
@@ -142,9 +172,10 @@ allowfullscreen></iframe>
   },
   
   {
+    id: 'llm-buttons',
     content: (
       <div className="flex flex-col items-center justify-center h-full w-full">
-        <video src="videos/llm-buttons.mp4" className="w-screen h-screen object-cover" controls muted />
+        <video ref={videoRefs['llm-buttons']} src="videos/llm-buttons.mp4" className="w-screen h-screen object-cover" controls muted />
       </div>  
     ),
   },
@@ -152,34 +183,48 @@ allowfullscreen></iframe>
     content: (
       <div className="flex flex-col items-center justify-center h-full w-full relative">
         <img src="https://replicate.delivery/xezq/hD9ekOUwBTUMQy9ZQObEUuiSjbpZM6qOpAzZJ79hhAWfwXzUA/out-0.png" className="absolute inset-0 w-full h-full object-cover" />
-        <blockquote className="text-[4vw] max-w-[80%] py-16 goudy-bookletter-1911-regular relative z-10">&quot;LLMs don’t like to click, they like to curl.&quot;
+        <blockquote className="text-[6vw] max-w-[80%] py-16 goudy-bookletter-1911-regular relative z-10">&quot;LLMs don't like to click, they like to curl.&quot;
           <br /><br />
         <span className="opacity-50">-- Karpathy</span></blockquote>
       </div>  
     ),
   },
+
   {
+    id: 'curl-frog',
     content: (
       <div className="flex flex-col items-center justify-center h-full w-full">
-        <img src="https://replicate.delivery/xezq/owAeiYaNdqQZPC7X2e72MqKAh79fstL9IPyAMFtn5SmC3tmpA/out-0.png" className="w-screen h-screen object-cover"></img>
+        <video ref={videoRefs['curl-frog']} src="videos/curl-frog.mp4" className="w-screen h-screen object-cover" muted loop />
       </div>
     ),
   },
   {
     content: (
+      <div className="flex flex-col items-center justify-center h-full w-full" style={{ backgroundColor: 'rgb(90, 20, 80)' }}>
+        <img src="images/curl.sh.png" className="w-screen h-screen object-contain"></img>
+      </div>
+    ),
+  },
+
+  {
+    id: 'curl-cog-llms-txt',
+    content: (
       <div className="flex flex-col items-center justify-center h-full w-full">
-        <video src="videos/curl-cog-llms-txt.mp4" className="w-screen h-screen object-cover" controls muted />
+        <video ref={videoRefs['curl-cog-llms-txt']} src="videos/curl-cog-llms-txt.mp4" className="w-screen h-screen object-cover" controls muted />
       </div>  
     ),
   },
+  
+
   {
+    id: 'cursor-cog',
     content: (
       <div className="flex flex-col items-center justify-center h-full w-full">
-        {/* curl screenshot with all the parts */}
-        <img src="images/ray-so-export.png" className="w-[95vw] h-[95vh] object-contain"></img>
-      </div>
+        <video ref={videoRefs['cursor-cog']} src="videos/cursor-cog.mp4" className="w-screen h-screen object-cover" controls muted />
+      </div>  
     ),
   },
+
   {
     content: (
       <div className="flex flex-col items-center justify-center h-full w-full relative">
@@ -200,17 +245,19 @@ allowfullscreen></iframe>
   },
 
   {
+    id: 'openapi-mcp',
     content: (
       <div className="flex flex-col items-center justify-center h-full w-full">
-        <video src="videos/openapi-mcp.mp4" className="w-screen h-screen object-cover" controls muted />
+        <video ref={videoRefs['openapi-mcp']} src="videos/openapi-mcp.mp4" className="w-screen h-screen object-cover" controls muted />
       </div>
     ),
   },
 
   {
+    id: 'claude-mcp',
     content: (
       <div className="flex flex-col items-center justify-center h-full w-full">
-        <video src="videos/claude-mcp.mp4" className="w-screen h-screen object-cover" controls muted />
+        <video ref={videoRefs['claude-mcp']} src="videos/claude-mcp.mp4" className="w-screen h-screen object-cover" controls muted />
       </div>
     ),
   },
@@ -219,14 +266,14 @@ allowfullscreen></iframe>
     content: (
       <div className="flex flex-col items-center justify-center h-full w-full bg-rose-700">        
         <p className="text-6xl goudy-bookletter-1911-regular">
-          Takeaways<br /><br />
+          Lessons...<br /><br />
 
           <ol className="list-decimal space-y-10">
             <li>Accept payments <span className="opacity-50">(so power users can scale up quickly)</span></li>
             <li>Document your shit <span className="opacity-50">(using OpenAPI)</span></li>
-            <li>Feed the machines <span className="opacity-50">(llms.txt, curl, markdown, schemas)</span></li>
-            <li>Use boring technology <span className="opacity-50">(LLMs know them well)</span></li>
-            <li>Practice good API hygiene <span className="opacity-50">(so your MCP users love you)</span></li>
+            <li>Feed the machines <span className="opacity-50">(llms.txt, markdown, schemas)</span></li>
+            <li>Use boring technology <span className="opacity-50">(SQL, cURL, Python, React)</span></li>
+            <li>Practice good API hygiene <span className="opacity-50">(your MCP users love you)</span></li>
           </ol>
         </p>
       </div>
@@ -263,6 +310,16 @@ function SlideShow() {
 
   useEffect(() => {
     localStorage.setItem(SLIDE_STORAGE_KEY, current);
+  }, [current]);
+
+  // Play and reset video if the current slide has a video id
+  useEffect(() => {
+    const slide = slides[current];
+    if (slide && slide.id && videoRefs[slide.id] && videoRefs[slide.id].current) {
+      const video = videoRefs[slide.id].current;
+      video.currentTime = 0;
+      video.play().catch(() => {});
+    }
   }, [current]);
 
   useEffect(() => {
@@ -342,7 +399,7 @@ if (!document.getElementById('noto-serif-font')) {
   const link = document.createElement('link');
   link.id = 'noto-serif-font';
   link.rel = 'stylesheet';
-  link.href = 'https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Goudy+Bookletter+1911&display=swap';
+  link.href = 'https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Goudy+Bookletter+1911&family=Roboto+Mono:wght@100..700&display=swap';
   document.head.appendChild(link);
 }
 
