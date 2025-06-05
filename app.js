@@ -76,7 +76,7 @@ const slides = [
     content: (
       <div className="flex flex-col items-center justify-center h-full w-full relative" style={{ backgroundColor: 'rgb(73, 162, 120)' }}>
         <ul className="list-disc space-y-10 text-5xl goudy-bookletter-1911-regular">
-          <li>AI researcher at Google / OpenAI / Tesla / OpenAI / Eureka Labs</li>
+          <li>AI researcher at Google / OpenAI / Tesla / OpenAI</li>
           <li>Stanford professor</li>
           <li>YouTube educator</li>
           <li>Coined the term "vibe coding"</li>
@@ -265,8 +265,8 @@ allowfullscreen></iframe>
 
   {
     content: (
-      <div className="flex flex-col items-center justify-center h-full w-full bg-rose-700">        
-        <p className="text-6xl goudy-bookletter-1911-regular">
+      <div className="flex flex-col items-center justify-center h-full w-full bg-red-700">        
+        <p className="text-5xl goudy-bookletter-1911-regular">
           Lessons...<br /><br />
 
           <ol className="list-decimal space-y-10">
@@ -274,7 +274,7 @@ allowfullscreen></iframe>
             <li>Document your shit <span className="opacity-50">(using OpenAPI)</span></li>
             <li>Feed the machines <span className="opacity-50">(llms.txt, markdown, schemas)</span></li>
             <li>Use boring technology <span className="opacity-50">(SQL, cURL, Python, React)</span></li>
-            <li>Practice good API hygiene <span className="opacity-50">(your MCP users love you)</span></li>
+            <li>Practice good API hygiene <span className="opacity-50">(your MCP users will love you)</span></li>
           </ol>
         </p>
       </div>
@@ -284,8 +284,7 @@ allowfullscreen></iframe>
   {
     content: (
       <div className="flex flex-col items-center justify-center h-full w-full relative">
-        <img src="https://replicate.delivery/xezq/hD9ekOUwBTUMQy9ZQObEUuiSjbpZM6qOpAzZJ79hhAWfwXzUA/out-0.png" className="absolute inset-0 w-full h-full object-cover" />
-        <blockquote className="text-[6vw] px-64 py-16 text-center goudy-bookletter-1911-regular relative z-10">-- FIN --</blockquote>
+        <img src="https://replicate.delivery/xezq/ft3QqGqOj2xQTifFse9ReFawKW0BKzWU4jAdTUQuwpD9mvPTB/tmp53lwx2px.png" className="absolute inset-0 w-full h-full object-cover" />
       </div>
     ),
   },
