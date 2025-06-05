@@ -53,10 +53,11 @@ const slides = [
       <div className="flex flex-col items-center justify-center h-full w-full bg-gray-900">
         <ul className="font-['Roboto_Mono'] text-6xl space-y-12">
           <li className="text-stone-500">// Run AI with an API<br /></li>
-          <li className="text-pink-400">replicate.run("kwaivgi/kling-v2.0")</li>
-          <li className="text-red-400">replicate.run("anthropic/claude-4-sonnet")</li>
-          <li className="text-orange-400">replicate.run("openai/gpt-4o")</li>
-          <li className="text-yellow-400">replicate.run("google/imagen-4")</li>
+          <li className="text-purple-400">replicate.run("black-forest-labs/flux-kontext-pro")</li>
+          <li className="text-pink-400">replicate.run("anthropic/claude-4-sonnet")</li>
+          <li className="text-red-400">replicate.run("openai/gpt-4o")</li>
+          <li className="text-orange-400">replicate.run("google/imagen-4")</li>
+          <li className="text-yellow-400">replicate.run("kwaivgi/kling-v2.0")</li>
           <li className="text-green-400">replicate.run("your/custom-model")</li>
         </ul>
       </div>
