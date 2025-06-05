@@ -27,13 +27,13 @@ const slides = [
       </div>
     ),
   },
-  {
-    content: (
-      <div className="flex flex-col items-center justify-center h-full w-full bg-yellow-300">
-        <img src="images/talk-github-repo-qr-code.png" className="w-[90vw] h-[90vh] object-contain mix-blend-multiply"></img>
-      </div>
-    ),
-  },
+  // {
+  //   content: (
+  //     <div className="flex flex-col items-center justify-center h-full w-full bg-yellow-300">
+  //       <img src="images/talk-github-repo-qr-code.png" className="w-[90vw] h-[90vh] object-contain mix-blend-multiply"></img>
+  //     </div>
+  //   ),
+  // },
   {
     content: (
       <div className="flex flex-col items-center justify-center h-full w-full bg-yellow-300">
@@ -51,7 +51,7 @@ const slides = [
   {
     content: (
       <div className="flex flex-col items-center justify-center h-full w-full bg-gray-900">
-        <ul className="font-['Roboto_Mono'] text-6xl space-y-12">
+        <ul className="font-['Roboto_Mono'] text-4xl space-y-12">
           <li className="text-stone-500">// Run AI with an API<br /></li>
           <li className="text-purple-400">replicate.run("black-forest-labs/flux-kontext-pro")</li>
           <li className="text-pink-400">replicate.run("anthropic/claude-4-sonnet")</li>
@@ -289,6 +289,14 @@ allowfullscreen></iframe>
       </div>
     ),
   },
+
+  // {
+  //   content: (
+  //     <div className="flex flex-col items-center justify-center h-full w-full bg-yellow-300">
+  //       <img src="images/talk-github-repo-qr-code.png" className="w-[90vw] h-[90vh] object-contain mix-blend-multiply"></img>
+  //     </div>
+  //   ),
+  // },
 
 ];
 
